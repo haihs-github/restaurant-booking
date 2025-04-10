@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# Optional: Remove compiled files if you ever use TypeScript
+dist/
+build/
+
+# Optional: Mac users
+*.log
+
+# Optional: dotenv backups or extra
+.env.*.local
