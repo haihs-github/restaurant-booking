@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const tableSchema = new mongoose.Schema({
-	number: {
+	tablenumber: {
 		type: Number,
 		required: true,
 		unique: true,
@@ -10,17 +10,15 @@ const tableSchema = new mongoose.Schema({
 		type: Number,
 		required: true,
 	},
-	isBooked: {
-		type: Boolean,
-		default: false,
-	},
-	bookedBy: {
+	status: {
 		type: String,
-		default: '',
-	},
-	bookedAt: {
-		type: Date,
-	},
+		enum: ['available', 'booked', 'in service'],
+		default: 'available',
+	}
+}, {
+	timestamps: true
 });
 
-module.exports = mongoose.model('Table', tableSchema);
+const Table = mongoose.model('Table', tableSchema);
+
+module.exports = Table;
